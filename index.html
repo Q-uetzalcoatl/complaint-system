@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anonymous Complaint Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 450px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #555;
+    }
+    select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    textarea { resize: none; }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #0056b3; }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Anonymous Complaint Form</h2>
+    <form action="submit.php" method="POST">
+      
+      <!-- Concern Category -->
+      <label for="category">Select Concern:</label>
+      <select name="category" id="category" required>
+        <option value="">-- Choose Category --</option>
+        <option value="facilities">Facilities</option>
+        <option value="academics">Academics</option>
+        <option value="student_services">Student Services</option>
+      </select>
+
+      <!-- Complaint Text -->
+      <label for="complaint">Your Complaint:</label>
+      <textarea name="complaint" id="complaint" rows="5" required></textarea>
+
+      <button type="submit">Submit Complaint</button>
+    </form>
+
+    <div class="footer">
+      <p>Your identity is protected. Complaints are sent anonymously.</p>
+    </div>
+  </div>
+</body>
+</html>
